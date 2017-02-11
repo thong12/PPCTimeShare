@@ -5,5 +5,5 @@ package com.ppctimeshare.hbbs.ppctimeshare.Request;
  */
 
 public class ClassTest {
-
+    public String name;
 }
