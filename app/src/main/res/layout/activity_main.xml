@@ -1,25 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/drawer_layout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:openDrawer="start">
+    android:orientation="vertical"
+    >
 
-    <include
-        layout="@layout/app_bar_main"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
-    <android.support.design.widget.NavigationView
-        android:id="@+id/nav_view"
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:minHeight="?attr/actionBarSize"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:titleTextColor="@android:color/white"
+            android:background="#a3b40c6b">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:contentDescription="User"
+                android:layout_height="wrap_content"
+                android:id="@+id/imgUser"
+                android:layout_gravity="left"
+                android:src="@drawable/user"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:textSize="25dp"
+                android:text="@string/trangchu"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="Setting"
+                android:id="@+id/imgSetting"
+                android:layout_marginRight="15dp"
+                android:layout_gravity="right"
+                android:src="@mipmap/ic_launcher"/>
+        </android.support.v7.widget.Toolbar>
+    </LinearLayout>
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:fitsSystemWindows="true"
-        app:headerLayout="@layout/nav_header_main"
-        app:menu="@menu/activity_main_drawer" />
+        android:layout_height="160dp"
+        android:id="@+id/imgResort"
+        android:src="@drawable/knd"
+        />
+</FrameLayout>
 
-</android.support.v4.widget.DrawerLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <ImageView
+            android:layout_marginLeft="7dp"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:id="@+id/imgFavors"
+            android:src="@drawable/denghi"
+           />
+
+        <ImageView
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:id="@+id/imgDiscover"
+            android:src="@drawable/denghi"
+            />
+
+        <ImageView
+            android:layout_marginRight="5dp"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:id="@+id/imgSuggest"
+            android:src="@drawable/denghi"
+
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <ImageView
+            android:layout_marginLeft="10dp"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:id="@+id/imgAbout"
+            android:src="@drawable/denghi"
+           />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:id="@+id/imgRecruitment"
+            android:src="@drawable/tuyendung"
+            />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        android:id="@+id/imgRequest"
+        android:src="@drawable/yeucau"/>
+
+</LinearLayout>
